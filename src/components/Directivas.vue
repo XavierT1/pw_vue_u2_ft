@@ -30,16 +30,20 @@
     <h2>Tabla</h2>
     <table>
       <thead>
+        <tr>
         <th>Nombre</th>
         <th>Apellido</th>
+        </tr>
       </thead>
       <tr v-show="nombre" v-for="{nombre,apellido} in arreglo" :key="nombre">
         <td>{{ nombre }}</td>
-        <td>{{ apellido }}</td>
+        <td>{{ apellido }}</td>   
       </tr>
     </table>
   </div>
 </template>
+
+
 
 <script>
 export default {
@@ -73,6 +77,7 @@ export default {
 
 
      agregarEstudiante1(event) {
+      console.log('Evento');
       if(event.charCode !== 13){ 
       return;
      }

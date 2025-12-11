@@ -1,21 +1,21 @@
 <template>
-  <div class="view-container">
-    <!-- <h2>Prueba</h2> -->
-  <Directivas />
-  </div>
+    <div class="container">
+    <Pregunta />  
+    </div>
 </template>
 
 <script>
-import Directivas from '../components/Directivas.vue'
+import Pregunta from '../components/Pregunta.vue'
 export default {
   components: {
-    Directivas,
+    Pregunta,
   },
 }
 </script>
 
 <style scoped>
-.view-container {
+.container {
+  flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
