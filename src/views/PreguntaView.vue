@@ -25,4 +25,8 @@ h2 {
   font-size: 50px;
 }
 
+body{
+  background-color: black;
+  color: black;
+}
 </style>
