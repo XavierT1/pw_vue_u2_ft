@@ -1,7 +1,6 @@
 <template>
     <div class="pokemon-container">
-    <img :src="srcImagen" 
-    alt="No se puede renderizar">
+        <img v-if="pokemonId" :src="srcImagen" alt="No se puede renderizar">
     </div>
 </template>
 
@@ -21,13 +20,15 @@ export default {
 }
 </script>
 
-<style>
-img{
-    position: relative;
+<style scoped>
+/* Scoped es recomendable para no afectar otros componentes */
+img {
     height: 200px;
-    left: 37%;
+    /* Tu estilo para centrar: */
+    position: relative;
+    left: 37%; 
 }
-.pokemon-container{
+.pokemon-container {
     height: 200px;
 }
 </style>
