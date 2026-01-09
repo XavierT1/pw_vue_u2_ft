@@ -22,7 +22,7 @@ export default {
     return {
       pokemonArr: [],
       pokemonGanador: null,
-      mensaje: null // 1. Variable reactiva nueva
+      mensaje: null,
     };
   },
   async mounted() {
@@ -34,10 +34,9 @@ export default {
       this.pokemonArr = await obtenerVectorPokemonFachada();
       const idAleatorio = obtenerAleatorioFachada(0,3);
       this.pokemonGanador = this.pokemonArr[idAleatorio].id;
-      this.mensaje = null; // Reiniciamos el mensaje al iniciar
+      this.mensaje = null;
     },
     evaluarGanador(idGanador){
-      // 2. Lógica para actualizar el mensaje en pantalla
       if(idGanador === this.pokemonGanador){
         this.mensaje = "¡Correcto! Has ganado";
       } else {
@@ -49,7 +48,6 @@ export default {
 </script>
 
 <style>
-/* Opcional: Para que se vea centrado y bonito */
 .resultado {
     display: flex;
     justify-content: center;
